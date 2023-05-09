@@ -12,7 +12,7 @@
   | obtain it through the world-wide-web, please send a note to          |
   | license@php.net so we can mail you a copy immediately.               |
   +----------------------------------------------------------------------+
-  | Author:                                                              |
+  | Author: Nuyoah                                                       |
   +----------------------------------------------------------------------+
 */
 
@@ -115,13 +115,12 @@ zend_module_entry hook_module_entry = {
 	NULL,
 	PHP_MINIT(hook),
 	PHP_MSHUTDOWN(hook),
-	NULL,		/* Replace with NULL if there's nothing to do at request start */
-	PHP_RSHUTDOWN(hook),	/* Replace with NULL if there's nothing to do at request end */
+	NULL,
+	PHP_RSHUTDOWN(hook),
 	PHP_MINFO(hook),
 	PHP_HOOK_VERSION,
 	STANDARD_MODULE_PROPERTIES
 };
-/* }}} */
 
 #ifdef COMPILE_DL_HOOK
 #ifdef ZTS
